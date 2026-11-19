@@ -1,0 +1,158 @@
+:root {
+  --pos-bg: #808890;
+  --pos-window-bg: #f4f4f6;
+  --pos-title-gradient: linear-gradient(180deg, #b0d2f0 0%, #85b4e0 50%, #70a6da 100%);
+  --pos-title-text: #000000;
+  --pos-border: #718298;
+  --pos-grid-border: #a0a8b4;
+  --pos-header-bg: #e2e8ef;
+  --pos-text: #000000;
+  --pos-red: #cc0000;
+  --font-pos: 'Tahoma', 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  font-family: var(--font-pos);
+  background-color: var(--pos-bg);
+  color: var(--pos-text);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--pos-bg);
+}
+
+/* POS Window Container */
+.pos-window {
+  background: #ffffff;
+  border: 1px solid #555555;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* POS Title Bar */
+.pos-title-bar {
+  background: linear-gradient(180deg, #cde3f8 0%, #99c2ec 50%, #7caee3 100%);
+  color: #000000;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #6088b3;
+}
+
+/* POS Table Grid */
+.pos-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.pos-grid-table th {
+  background: #e2e8ef;
+  color: #000000;
+  border: 1px solid #a0a8b4;
+  padding: 5px 8px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.pos-grid-table td {
+  border: 1px solid #d0d4dc;
+  padding: 4px 8px;
+  color: #000000;
+}
+
+.pos-grid-table tr:hover {
+  background-color: #e8f2fc;
+}
+
+/* Form Inputs */
+.pos-input, .pos-select {
+  border: 1px solid #7a8a9e;
+  background: #ffffff;
+  color: #000000;
+  padding: 3px 6px;
+  font-family: var(--font-pos);
+  font-size: 12px;
+  outline: none;
+  border-radius: 2px;
+}
+
+.pos-input:focus, .pos-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* POS Buttons */
+.pos-btn {
+  background: linear-gradient(180deg, #ffffff 0%, #e2e8ef 100%);
+  border: 1px solid #708090;
+  color: #000000;
+  padding: 4px 12px;
+  font-family: var(--font-pos);
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.pos-btn:hover {
+  background: linear-gradient(180deg, #eaf2fa 0%, #cce0f5 100%);
+  border-color: #3b82f6;
+}
+
+.pos-btn-primary {
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: 1px solid #1e40af;
+}
+
+.pos-btn-primary:hover {
+  background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+}
+
+.pos-btn-success {
+  background: linear-gradient(180deg, #10b981 0%, #047857 100%);
+  color: #ffffff;
+  border: 1px solid #065f46;
+}
+
+.pos-btn-success:hover {
+  background: linear-gradient(180deg, #34d399 0%, #059669 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.15s ease-in forwards;
+}
